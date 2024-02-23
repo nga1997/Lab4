@@ -6,9 +6,9 @@ public class BinarySearch {
                 if (arr[mid] == target) {
                     return mid; // Element found
                 } else if (arr[mid] < target) {
-                    return binarySearch(arr, target, mid + 1, high); // Search in the right half
+                    return binarySearch(arr, target, mid + 1, high);
                 } else {
-                    return binarySearch(arr, target, low, mid - 1); // Search in the left half
+                    return binarySearch(arr, target, low, mid - 1);
                 }
             }
 
@@ -17,13 +17,13 @@ public class BinarySearch {
 
         public static void main(String[] args) {
             int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-            int target = 7;
+            int target = 5;
             int result = binarySearch(array, target, 0, array.length - 1);
 
-            if (result != -1) {
-                System.out.println("Element found at index: " + result);
+            if (result != 1) {
+                System.out.println("Element found at: " + result);
             } else {
-                System.out.println("Element not found in the array.");
+                System.out.println("Element does not exist.");
             }
         }
     }
