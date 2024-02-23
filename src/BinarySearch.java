@@ -4,7 +4,7 @@ public class BinarySearch {
                 int mid = low + (high - low) / 2;
 
                 if (arr[mid] == target) {
-                    return mid; // Element found
+                    return mid; // Returns when element found
                 } else if (arr[mid] < target) {
                     return binarySearch(arr, target, mid + 1, high);
                 } else {
@@ -12,12 +12,12 @@ public class BinarySearch {
                 }
             }
 
-            return -1; // Element not found
+            return -1; // When element not found
         }
 
         public static void main(String[] args) {
             int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-            int target = 5;
+            int target = 6;
             int result = binarySearch(array, target, 0, array.length - 1);
 
             if (result != 1) {
